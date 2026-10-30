@@ -1,6 +1,6 @@
 ---
 name: d2r-reimagined-guide
-description: Answers Diablo II: Resurrected Reimagined mod questions strictly from the mod's own official data - runewords, unique and set items, cube recipes, Horadric crafting, skill numbers and synergies, drop eligibility, monster stats, IAS frames, loot filters, patch notes, class changes, build and progression advice. Use whenever the player asks about D2R Reimagined, its classes, skills, runes, items, modifiers, farming targets or difficulty tuning, or about any change the mod makes to vanilla Diablo II: Resurrected. Handles English and Chinese (zhCN) item and skill names.
+description: "Answers Diablo II: Resurrected Reimagined mod questions strictly from the mod's own official data - runewords, unique and set items, cube recipes, Horadric crafting, skill numbers and synergies, drop eligibility, monster stats, IAS frames, loot filters, patch notes, class changes, build and progression advice. Use whenever the player asks about D2R Reimagined, its classes, skills, runes, items, modifiers, farming targets or difficulty tuning, or about any change the mod makes to vanilla Diablo II: Resurrected. Handles English and Chinese (zhCN) item and skill names."
 ---
 
 # D2R Reimagined Player Guide
