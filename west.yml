@@ -1,0 +1,54 @@
+# west manifest for the D2R Reimagined guide skill.
+#
+# The workspace root is this repository itself: .west/config declares
+# `path = .`, so `west update` syncs the official upstream repositories into
+# ./upstream/ (git-ignored). Do NOT run `west init` in this repository - the
+# workspace already exists. After cloning, just run:
+#
+#   west update
+#
+# Shallow cloning is declared per project with `clone-depth: 1`, which applies
+# on the first clone only. To keep later fetches shallow, use:
+#
+#   west update -o=--depth=1 -n
+#
+# (west update itself has no --depth option; `clone-depth` is the manifest key.)
+#
+# This repository stores NO game data. Everything under upstream/ belongs to
+# the D2R-Reimagined organisation and is read-only reference material for the
+# skill.
+manifest:
+  defaults:
+    remote: d2r-reimagined
+
+  remotes:
+    - name: d2r-reimagined
+      url-base: https://github.com/D2R-Reimagined
+
+  projects:
+    # Official wiki content: prose guides, class pages, build guides, item
+    # pages, recipe pages and per-version patch notes. Mostly .html with .md
+    # counterparts; carries ~530 image assets.
+    - name: wiki-content
+      revision: main
+      path: upstream/wiki-content
+      clone-depth: 1
+      description: Official D2R Reimagined wiki content (guides, builds, patch notes)
+
+    # Official data site. The machine-readable truth lives in
+    # static/data/keyed/*.json plus static/data/strings/<locale>.json.
+    - name: d2r-reimagined-website
+      revision: master
+      path: upstream/website
+      clone-depth: 1
+      description: Official D2R Reimagined website (keyed JSON item/skill/runeword data)
+
+    # The exporter that produces static/data/keyed/*.json. Small (about 1.5 MB)
+    # and it carries the field dictionary and calculation contracts: docs
+    # explaining skill calculations, property ranges, drop/health/IAS calculators
+    # and the loot-filter wire format. Read it to interpret JSON fields.
+    - name: d2r-multi-export-tool
+      revision: main
+      path: upstream/export-tool
+      clone-depth: 1
+      description: Official JSON exporter (field semantics and calculation contracts)

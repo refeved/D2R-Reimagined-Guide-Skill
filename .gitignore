@@ -12,7 +12,20 @@ desktop.ini
 .qoder/cache/
 .qoder/logs/
 
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Synced official upstream content (west workspace projects, ~195 MB, read-only).
+# .west/config and west.yml ARE tracked: they make this repository the workspace.
+/upstream/
+.west/*
+!.west/config
+
 # Temporary
 *.tmp
 *.bak
+*.log
 ~$*
